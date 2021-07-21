@@ -1,6 +1,7 @@
 //Requiring Modules
 const express = require("express");
 const multer = require("multer");
+const fs = require('fs')
 require('dotenv').config()
 const csv = require("csvtojson");
 const util = require("util");
@@ -46,6 +47,7 @@ app.post("/uploads", upload.single("file"), async (req, res) => {
           return res.status(400).send();
         }
       }
+      fs.unlinkSync('./Excel/'+name)
       res.redirect('/')
       res.status(200).send();
       
