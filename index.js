@@ -47,6 +47,7 @@ app.post("/uploads", upload.single("file"), async (req, res) => {
           return res.status(400).send();
         }
       }
+      //Removing File after Storing its Data
       fs.unlinkSync('./Excel/'+name)
       res.redirect('/')
       res.status(200).send();
