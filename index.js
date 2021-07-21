@@ -7,6 +7,8 @@ const util = require("util");
 const Users = require("./models/Users");
 require("./db/db");
 const app = express();
+//Serving up HTML file
+app.use(express.static('public'))
 
 //PORT declare
 const port = process.env.PORT || 3000
