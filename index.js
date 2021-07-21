@@ -8,6 +8,10 @@ const Users = require("./models/Users");
 require("./db/db");
 const app = express();
 
+//PORT declare
+const port = process.env.PORT || 3000
+
+
 //File Upload Validation
 const upload = multer({
   dest: "Excel",
@@ -45,6 +49,6 @@ app.post("/uploads", upload.single("file"), async (req, res) => {
 });
 
 //Server Port to listen
-app.listen("3000", () => {
+app.listen(port, () => {
   console.log("Running");
 });
