@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 module.exports = mongoose
   .connect(
-    'mongodb+srv://fileupload:B87gRKZ3ZFafS0fH@cluster0.wg1xo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    process.env.MONGODB_URL,
     { useUnifiedTopology: true, useNewUrlParser: true, dbName: "fileupload" }
   )
   .then(() => {

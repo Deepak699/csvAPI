@@ -46,7 +46,11 @@ app.post("/uploads", upload.single("file"), async (req, res) => {
           return res.status(400).send();
         }
       }
+      res.redirect('/')
       res.status(200).send();
+      
+      
+      
     });
 });
 
