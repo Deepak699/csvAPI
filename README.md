@@ -11,7 +11,7 @@ Installation:
 "npm install"
 
 Usage:
-After Installing all modules just use "npm run dev" to start server using nodemon
+After Installing all modules just use "npm run dev" to start server and ctrl+c to stop server
 
 
 
