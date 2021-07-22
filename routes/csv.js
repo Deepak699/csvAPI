@@ -43,9 +43,6 @@ const upload = multer({
         fs.unlinkSync('./Excel/'+name)
         res.redirect('/')
         res.status(200).send();
-        
-        
-        
       });
   });
 
